@@ -1,4 +1,13 @@
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# How to conver App.tsx to App.js
+
+## Step 1: Rename App.tsx file to App.js
+## Step 2: Delete tsconfig.json file
+## Step 3: Remove typescript library in package.json file
+type command on terminal
+```bash
+npm uninstall typescript
+```
 
 # Getting Started
 
