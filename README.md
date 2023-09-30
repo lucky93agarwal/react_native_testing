@@ -9,9 +9,9 @@ Step 4. Export the file, so that we can use it elsewhere in our app.
 
 # How to conver App.tsx to App.js
 
-## Step 1: Rename App.tsx file to App.js
-## Step 2: Delete tsconfig.json file
-## Step 3: Remove typescript library in package.json file
+Step 1: Rename App.tsx file to App.js. <br />
+Step 2: Delete tsconfig.json file. <br />
+Step 3: Remove typescript library in package.json file.
 type command on terminal
 ```bash
 npm uninstall typescript
