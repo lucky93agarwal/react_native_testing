@@ -1,5 +1,22 @@
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
+# 4 part of screen
+
+Step 1. Import libraries to create componets.
+Step 2. Create a component that return some jsx / simple function.
+Step 3. Create a StyleSheet to style the component.
+Step 4. Export the file, so that we can use it elsewhere in our app.
+
+# How to conver App.tsx to App.js
+
+## Step 1: Rename App.tsx file to App.js
+## Step 2: Delete tsconfig.json file
+## Step 3: Remove typescript library in package.json file
+type command on terminal
+```bash
+npm uninstall typescript
+```
+
 # Getting Started
 
 >**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
