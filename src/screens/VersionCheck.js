@@ -17,6 +17,7 @@ const VersionCheckScreen = () => {
   return (
   <View style={styles.container}>
     <Image source={logo} resizeMode="contain" style={styles.highlight} />
+    <Text style={styles.title}>New Update is available</Text>
     <Text style={styles.sublight}>The current version of app is no longer supported. We apologized for any inconvenience we may have caused you. </Text>
     <TouchableOpacity style={styles.button} onPress={()=> Linking.openURL("https://play.google.com/store/apps/details?id=com.thealphamerc.flutter_twitter_clone") }>
       <Text style={styles.textButton}>Update now</Text>
@@ -32,11 +33,19 @@ const styles = StyleSheet.create({
     alignContent:"center",
     alignSelf:"center",
     color: "white",
+    padding:"0"
   },
   sublight: {
     fontWeight: '600',
+    marginHorizontal:60,
+    fontSize:12,
+    color: "white",
+    textAlign: 'center',
+  },
+  title: {
+    fontWeight: '600',
     marginHorizontal:30,
-    fontSize:16,
+    fontSize:22,
     color: "white",
     textAlign: 'center',
   },
