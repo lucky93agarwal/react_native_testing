@@ -12,14 +12,32 @@ import {
   View,
 } from 'react-native';
 
+import SplashScreenComponent from './src/screens/Splash';
+import VersionScreen from './src/screens/VersionCheck';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
+const Stack = createNativeStackNavigator();
 
 const App = () => {
+
+  console.log("in lucky2");
   return (
-  <View style={styles.container}>
-    <Text style={styles.highlight}>Dream 11</Text>
-    <Text style={styles.sublight}>MSL Dream Plus is an Indian fantasy sports UI platform that allows users to play fantasy cricket, hockey, football, kabaddi, handball, basketball, volleyball, rugby, futsal, American football and baseball. </Text>
-  </View>
+     <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Splash"
+          component={SplashScreenComponent}
+          options={{title: 'Welcome',headerShown: false}}
+        />
+         <Stack.Screen
+          name="Version"
+          component={VersionScreen}
+          options={{title: 'Version',headerShown: false}}
+        
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 
