@@ -9,7 +9,7 @@ import {
   Image,
   TouchableOpacity,
 } from 'react-native';
-
+import '../utils/global';
 
 
 
@@ -18,7 +18,6 @@ import {
 
 const SplashScreenComponent = ({navigation}) => {
   useEffect(()=>{
-    console.warn("Lucky Agarwal");
     setTimeout(() => {
       navigation.navigate('Version', {name: 'Jane'});
     }, 5000);
@@ -26,7 +25,7 @@ const SplashScreenComponent = ({navigation}) => {
   return (
   <View style={styles.container}>
     <Image source={logo} resizeMode="contain" style={styles.highlight} />
-    <Text style={styles.sublight}>MSL Dream Plus is an Indian fantasy sports UI platform that allows users to play fantasy cricket, hockey, football, kabaddi, handball, basketball, volleyball, rugby, futsal, American football and baseball. </Text>
+    <Text style={styles.sublight}>{global.appIntro}</Text>
   
   </View>
   );

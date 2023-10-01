@@ -14,6 +14,8 @@ import {
 
 import SplashScreenComponent from './src/screens/Splash';
 import VersionScreen from './src/screens/VersionCheck';
+import LanguageScreen from './src/screens/Language';
+
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
@@ -28,7 +30,7 @@ const App = () => {
         <Stack.Screen
           name="Splash"
           component={SplashScreenComponent}
-          options={{title: 'Welcome',headerShown: false}}
+          options={{title: 'Welcome',headerShown: false,headerLeft: null,gestureEnabled: false,}}
         />
          <Stack.Screen
           name="Version"
@@ -36,6 +38,12 @@ const App = () => {
           options={{title: 'Version',headerShown: false}}
         
         />
+        <Stack.Screen 
+          name="Language"
+          component={LanguageScreen}
+          options={{title: 'Language',headerShown: false}}
+        />
+
       </Stack.Navigator>
     </NavigationContainer>
   );

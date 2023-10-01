@@ -1,6 +1,7 @@
 
 import logo from '../../assets/images/dream_plus_icon_removebg.png';
-import React from 'react';
+import React, {useEffect}  from 'react';
+import '../utils/global';
 import {
   StyleSheet,
   Text,
@@ -11,18 +12,29 @@ import {
 } from 'react-native';
 
 
-// console.log("Lucky AGarwal");
+import {NavigationContainer,useNavigation} from '@react-navigation/native';
 
-const VersionCheckScreen = () => {
+
+const VersionCheckScreen = ({navigation}) => {
+
+  const navigationNew = useNavigation();
+  useEffect(()=>{
+    navigation.navigate('Language', {name: 'Jane'});
+    const unsubscripe = navigationNew.addListener("beforeRemove", e=>{
+      e.preventDefault();
+    });
+    return unsubscripe;
+  },[navigationNew])
+
   return (
-  <View style={styles.container}>
-    <Image source={logo} resizeMode="contain" style={styles.highlight} />
-    <Text style={styles.title}>New Update is available</Text>
-    <Text style={styles.sublight}>The current version of app is no longer supported. We apologized for any inconvenience we may have caused you. </Text>
-    <TouchableOpacity style={styles.button} onPress={()=> Linking.openURL("https://play.google.com/store/apps/details?id=com.thealphamerc.flutter_twitter_clone") }>
-      <Text style={styles.textButton}>Update now</Text>
-    </TouchableOpacity>
-  </View>
+    <View style={styles.container}>
+      <Image source={logo} resizeMode="contain" style={styles.highlight} />
+      <Text style={styles.title}>{global.newUpdate}</Text>
+      <Text style={styles.sublight}>{global.theCurrentVersion}</Text>
+      <TouchableOpacity style={styles.button} onPress={()=> Linking.openURL(global.newVersionURL) }>
+        <Text style={styles.textButton}>Update now</Text>
+      </TouchableOpacity>
+    </View>
   );
 };
 
@@ -38,6 +50,7 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     marginHorizontal:60,
     fontSize:12,
+   
     color: "white",
     textAlign: 'center',
   },
@@ -45,6 +58,7 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     marginHorizontal:30,
     fontSize:22,
+    marginBottom:10,
     color: "white",
     textAlign: 'center',
   },
