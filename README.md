@@ -1,8 +1,9 @@
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 ## Screen
-<img src="https://github.com/lucky93agarwal/react_native_testing/assets/53622073/2cd3d1cc-7faf-4007-8707-89cad33848aa" width="200"  title="Splash Screen"/>
-<img src="https://github.com/lucky93agarwal/react_native_testing/assets/53622073/5231b535-1aab-4afb-a3f6-0bac5d5a7460" width="200" title="Version Update Screen"/>
+<img src="https://github.com/lucky93agarwal/react_native_testing/assets/53622073/5231b535-1aab-4afb-a3f6-0bac5d5a7460" width="200" title="Splash Screen"/>
+<img src="https://github.com/lucky93agarwal/react_native_testing/assets/53622073/2cd3d1cc-7faf-4007-8707-89cad33848aa" width="200"  title="Version Update Screen"/>
+
 <img src="https://github.com/lucky93agarwal/Restaurant_App_Design/assets/53622073/7bb29a20-6df4-4c28-8eab-c8f14badd558" width="200" title="Slider Screen"/>
 
 
