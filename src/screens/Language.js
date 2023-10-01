@@ -22,9 +22,13 @@ const LanguageChangeScreen = () => {
         setColortwo("#230505"); 
         setSelect("#3f181b");
         setUnselect("#7b1b23");
+        setHide(true);
+        setHideTwo(false);
     }
 
     const [colortwo,setColortwo]=useState("#230505");
+    const [hide,setHide]=useState(false);
+    const [hideTwo,setHideTwo]=useState(false);
 
     const [unselect,setUnselect]=useState("#3f181b");
     const [select,setSelect]=useState("#3f181b");
@@ -34,6 +38,8 @@ const LanguageChangeScreen = () => {
         setColortwo("#4b090d"); 
         setSelect("#7b1b23");
         setUnselect("#3f181b");
+        setHideTwo(true);
+        setHide(false);
     }
   return (
     <LinearGradient  colors={['#120107', '#470f1a','#0e102b', '#010415']}  style={styles.container}>
@@ -46,12 +52,21 @@ const LanguageChangeScreen = () => {
 
                 <TouchableOpacity style={[styles.customButton, {backgroundColor:color,  borderColor: unselect,}]} onPress={()=> handleClick() }>
                     <Text style={styles.customTextButton}>English</Text>
-                    <Text style={styles.customTextButton}>English</Text>
+                    <View style={[styles.circle]}>
+                    <View style={[styles.circleTwo,{opacity:hide?1:0}]}/>
+                      
+                    </View>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={[styles.customButton, {backgroundColor:colortwo, borderColor: select,}]} onPress={()=>  handleClickTwo() }>
                     <Text style={styles.customTextButton}>हिन्दी - Hindi</Text>
-                    <Text style={styles.customTextButton}>English</Text>
+                    <View style={[styles.circle]}>
+                     
+                        <View style={[styles.circleTwo,{opacity:hideTwo?1:0}]}/>
+                     
+                      
+                      
+                    </View>
                 </TouchableOpacity>
             </View>
 
@@ -67,6 +82,23 @@ const LanguageChangeScreen = () => {
 };
 
 const styles = StyleSheet.create({
+  circle:{
+    width:18,
+    height:18,
+    borderRadius: 15,
+    borderColor: "white",
+    borderWidth:2,
+    padding:2,
+    justifyContent:'center',
+    alignContent:"center",
+    alignItems:"center"
+  },
+  circleTwo:{
+    width:7,
+    height:7,
+    borderRadius: 15,
+    backgroundColor: "white",
+  },
     verticalSpace: {
         height:50
     },
