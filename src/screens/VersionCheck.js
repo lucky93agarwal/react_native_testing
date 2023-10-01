@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 
 
-console.log("Lucky AGarwal");
+// console.log("Lucky AGarwal");
 
 const VersionCheckScreen = () => {
   return (
@@ -32,7 +32,6 @@ const styles = StyleSheet.create({
     width:300,
     alignContent:"center",
     alignSelf:"center",
-    color: "white",
     padding:"0"
   },
   sublight: {
