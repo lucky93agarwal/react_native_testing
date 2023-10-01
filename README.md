@@ -1,21 +1,27 @@
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
+## Screen
+<img src="https://github.com/lucky93agarwal/react_native_testing/assets/53622073/5231b535-1aab-4afb-a3f6-0bac5d5a7460" width="200" title="Splash Screen"/>
+<img src="https://github.com/lucky93agarwal/react_native_testing/assets/53622073/2cd3d1cc-7faf-4007-8707-89cad33848aa" width="200"  title="Version Update Screen"/>
 
-# Screen Navigation
+<img src="https://github.com/lucky93agarwal/Restaurant_App_Design/assets/53622073/7bb29a20-6df4-4c28-8eab-c8f14badd558" width="200" title="Slider Screen"/>
+
+
+## Screen Navigation
 
 ```bash
 npm install @react-navigation/native @react-navigation/native-stack
 npm install react-native-screens react-native-safe-area-context
 ```
 
-# 4 part of screen
+## 4 part of screen
 
 Step 1. Import libraries to create componets.<br />
 Step 2. Create a component that return some jsx / simple function.<br />
 Step 3. Create a StyleSheet to style the component.<br />
 Step 4. Export the file, so that we can use it elsewhere in our app.
 
-# How to conver App.tsx to App.js
+## How to conver App.tsx to App.js
 
 Step 1: Rename App.tsx file to App.js. <br />
 Step 2: Delete tsconfig.json file. <br />
@@ -25,7 +31,19 @@ type command on terminal
 npm uninstall typescript
 ```
 
-# Getting Started
+## Linear Gradient
+
+```bash
+npm i react-native-linear-gradient
+```
+
+## Create new project
+
+```bash
+npx react-native@latest init <Project_Name>
+```
+
+## Getting Started
 
 >**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
@@ -102,3 +120,7 @@ To learn more about React Native, take a look at the following resources:
 - [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
 - [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
 - [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+
+## Visitors Count
+
+<img align="left" src = "https://profile-counter.glitch.me/react_native_testing/count.svg" alt ="Loading">
