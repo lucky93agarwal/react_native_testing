@@ -1,6 +1,9 @@
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
-
+## Screen
+<img src="https://github.com/lucky93agarwal/Restaurant_App_Design/assets/53622073/8b4d14fe-4a31-4831-a205-cd881e937021" width="200"  title="Slider Screen"/>
+<img src="https://github.com/lucky93agarwal/Restaurant_App_Design/assets/53622073/307d6d1c-cddd-4dae-a91c-7f27fa560ea3" width="200" title="Slider Screen"/>
+<img src="https://github.com/lucky93agarwal/Restaurant_App_Design/assets/53622073/7bb29a20-6df4-4c28-8eab-c8f14badd558" width="200" title="Slider Screen"/>
 ## Screen Navigation
 
 ```bash
