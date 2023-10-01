@@ -31,6 +31,12 @@ npm uninstall typescript
 npm i react-native-linear-gradient
 ```
 
+# Create new project
+
+```bash
+npx react-native@latest init <Project_Name>
+```
+
 # Getting Started
 
 >**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
