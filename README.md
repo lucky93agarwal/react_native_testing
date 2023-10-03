@@ -11,7 +11,25 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 
 
 
+## Debug and Release APK
+# How to generate one in 3 steps?
+Step 1: Go to the root of the project in the terminal and run the below command:<br />
+```bash
+react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res
+```
+Step 2: Go to android directory:<br />
+```bash
+cd android
+```
+Step 3: Now in this android folder, run this command<br />
+```bash
+./gradlew assembleDebug
+```
 
+There! you’ll find the apk file in the following path:< br/>
+```bash
+yourProject/android/app/build/outputs/apk/debug/app-debug.apk
+```
 
 ## Screen Navigation
 
