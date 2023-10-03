@@ -12,6 +12,7 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 
 
 ## Debug and Release APK
+# Debug APK
 # How to generate one in 3 steps?
 Step 1: Go to the root of the project in the terminal and run the below command:<br />
 ```bash
