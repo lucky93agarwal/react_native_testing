@@ -1,20 +1,28 @@
 
 import logo from '../../assets/images/dream_plus_icon_removebg.png';
-import React, {useState}  from 'react';
+import React, {useState,useEffect}  from 'react';
+import logos from '../../assets/images/dream_plus_icon_removebg_small.png';
 import '../utils/global';
 import {
   StyleSheet,
   Text,
   View,
   TouchableOpacity,
-  Linking,
+  Image,
 } from 'react-native';
 
 import LinearGradient from 'react-native-linear-gradient';
+import {NavigationContainer,useNavigation} from '@react-navigation/native';
 
+const LanguageChangeScreen = ({navigation}) => {
 
-const LanguageChangeScreen = () => {
-
+  const navigationNew = useNavigation();
+  useEffect(()=>{
+    const unsubscripe = navigationNew.addListener("beforeRemove", e=>{
+      e.preventDefault();
+    });
+    return unsubscripe;
+  },[navigationNew])
 
     const [color,setColor]=useState("#230505");
     const handleClick = () => { 
@@ -45,13 +53,14 @@ const LanguageChangeScreen = () => {
     <LinearGradient  colors={['#120107', '#470f1a','#0e102b', '#010415']}  style={styles.container}>
             <View style={styles.contentContainer}>
             <View style={styles.verticalSpace}/>
-            <View style={styles.verticalSpace}/>
-                <Text style={styles.title}>Select App Language </Text>
-                <Text style={styles.sublight}>You can change your prefersence from "My Info & Setting" in the menu later</Text>
+                <Image source={logos} resizeMode="contain" style={styles.highlight} />
+               
+                <Text style={styles.title}>{global.selectAppLanguage}</Text>
+                <Text style={styles.sublight}>{global.youCanChangeYourPrefersenceFrom}</Text>
                
 
-                <TouchableOpacity style={[styles.customButton, {backgroundColor:color,  borderColor: unselect,}]} onPress={()=> handleClick() }>
-                    <Text style={styles.customTextButton}>English</Text>
+                <TouchableOpacity style={[styles.customButton, {backgroundColor:color,  borderColor: unselect}]} onPress={()=> handleClick() }>
+                    <Text style={styles.customTextButton}>{global.english}</Text>
                     <View style={[styles.circle]}>
                     <View style={[styles.circleTwo,{opacity:hide?1:0}]}/>
                       
@@ -59,7 +68,7 @@ const LanguageChangeScreen = () => {
                 </TouchableOpacity>
 
                 <TouchableOpacity style={[styles.customButton, {backgroundColor:colortwo, borderColor: select,}]} onPress={()=>  handleClickTwo() }>
-                    <Text style={styles.customTextButton}>हिन्दी - Hindi</Text>
+                    <Text style={styles.customTextButton}>{global.hindi}</Text>
                     <View style={[styles.circle]}>
                      
                         <View style={[styles.circleTwo,{opacity:hideTwo?1:0}]}/>
@@ -71,8 +80,8 @@ const LanguageChangeScreen = () => {
             </View>
 
             <View style={styles.footContainer}>
-                <TouchableOpacity style={styles.button} onPress={()=> Linking.openURL(global.newVersionURL) }>
-                    <Text style={styles.textButton}>CONTINUE</Text>
+                <TouchableOpacity style={styles.button} onPress={()=>  navigation.navigate('Welcome', {name: 'Jane'}) }>
+                    <Text style={styles.textButton}>{global.continue}</Text>
                 </TouchableOpacity>
             </View>
             
@@ -82,6 +91,11 @@ const LanguageChangeScreen = () => {
 };
 
 const styles = StyleSheet.create({
+  highlight: {
+    height:50,
+    alignContent:"center",
+    alignSelf:"center",
+  },
   circle:{
     width:18,
     height:18,
@@ -110,16 +124,10 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         borderWidth:2
     },
-
-  highlight: {
-    width:300,
-    alignContent:"center",
-    alignSelf:"center",
-    padding:"0"
-  },
   sublight: {
     fontWeight: '400',
     marginHorizontal:30,
+    marginBottom:20,
     fontSize:13,
     color: "white",
     textAlign: 'center',
