@@ -91,6 +91,10 @@ const LoginScreen = ({ navigation }) => {
             <View style={{ width: "100%", height: 50, marginVertical: 20, marginHorizontal: 20, backgroundColor: "#dadada", justifyContent:"center",alignItems:"center" }}>
                 <Text style={{color:"#737373",fontWeight:"600",fontSize:15}}>Next</Text>
             </View>
+            <View style={{justifyContent:"center",alignItems:'center'}}>
+                <Text>{global.notAMember}</Text>
+                <Text style={{color:"black"}}>{global.register}</Text>
+            </View>
             {/* <View style={{ flexDirection: 'row', marginTop: 10 }}>
                 <BouncyCheckbox
                     alignItems="flex-start"

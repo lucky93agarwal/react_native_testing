@@ -26,3 +26,5 @@
   global.createTeams = 'Create Teams';
   global.iCertifyThatIAmAbove ='I certify that I am above 18 years.';
   global.useYourSkillsToPickTheRight = 'Use your skills to pick the right players and earn fantasy points.';
+  global.notAMember = 'Not a member?';
+  global.register = 'Register';
