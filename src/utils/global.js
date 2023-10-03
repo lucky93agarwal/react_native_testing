@@ -24,4 +24,5 @@
   global.competeWithOtherDreamPlus = 'Compete with other Dream + players for big rewards.';
 
   global.createTeams = 'Create Teams';
+  global.iCertifyThatIAmAbove ='I certify that I am above 18 years.';
   global.useYourSkillsToPickTheRight = 'Use your skills to pick the right players and earn fantasy points.';

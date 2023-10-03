@@ -76,11 +76,12 @@ const WelcomeScreen = ({navigation}) => {
                         }
                         renderItem={({ item, index }) => {
                             return (
-                                <View style={{
+                                <View key={item.id} style={{
                                     width: width, height: height / 2, justifyContent: "center",
                                     alignItems: "center"
                                 }}>
                                     <TouchableOpacity
+                                    
                                         disabled={true}
                                         style={{
                                             width: "90%",

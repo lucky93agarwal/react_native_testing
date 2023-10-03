@@ -3,6 +3,7 @@ import logo from '../../assets/images/dream_plus_icon_removebg.png';
 import facebookImg from '../../assets/images/facebook.png';
 import googleImg from '../../assets/images/google.png';
 import React, { useEffect } from 'react';
+import BouncyCheckbox from "react-native-bouncy-checkbox";
 import '../utils/global';
 import {
     StyleSheet,
@@ -12,6 +13,7 @@ import {
     StatusBar,
     Dimensions,
     TextInput,
+    CheckBox,
 } from 'react-native';
 
 
@@ -62,25 +64,49 @@ const LoginScreen = ({ navigation }) => {
                 </View>
             </View>
             <View style={{ width: width, height: 50, flexDirection: "row", justifyContent: "center", alignItems: "center", marginVertical: 10 }}>
-                <View style={styles.pointStyle}/>
-                <View style={styles.pointStyle}/>
-                <View style={styles.pointStyle}/>
-                <View style={{ width: 50, height: 50, backgroundColor: "#f5f5f5", marginHorizontal: 5, borderRadius: 80,justifyContent:'center',alignItems:'center' }}>
-                    <Text style={{color:"#7a7a7a",fontWeight:"600"}}>OR</Text>
+                <View style={styles.pointStyle} />
+                <View style={styles.pointStyle} />
+                <View style={styles.pointStyle} />
+                <View style={{ width: 50, height: 50, backgroundColor: "#f5f5f5", marginHorizontal: 5, borderRadius: 80, justifyContent: 'center', alignItems: 'center' }}>
+                    <Text style={{ color: "#7a7a7a", fontWeight: "600" }}>OR</Text>
                 </View>
-                <View style={styles.pointStyle}/>
-                <View style={styles.pointStyle}/>
-                <View style={styles.pointStyle}/>
+                <View style={styles.pointStyle} />
+                <View style={styles.pointStyle} />
+                <View style={styles.pointStyle} />
             </View>
-            <View style={{ width: "100%",height:50,marginVertical: 10,marginHorizontal:20,backgroundColor:"#f5f5f5" }}>
-            <TextInput
-                style={{fontSize:18,width:"100%",paddingLeft:20, borderRadius: 5,borderBottomWidth:2,borderColor:"#c6c6c6"}}
-                placeholder='Email or mobile no.'
+            <View style={{ width: "100%", height: 50, marginVertical: 10, marginHorizontal: 20, backgroundColor: "#f5f5f5" }}>
+                <TextInput
+                    style={{ fontSize: 18, width: "100%", paddingLeft: 20, borderRadius: 5, borderBottomWidth: 2, borderColor: "#c6c6c6" }}
+                    autoCapitalize='none'
+                    autoCorrect={false}
+                    placeholder='Email or mobile no.'
                 ></TextInput>
             </View>
+            <View style={{ width: "100%", height: 50, marginHorizontal: 20,flexDirection:"row",alignItems:"center"}}>
+                <View style={{borderColor:"#d7d7d7",borderWidth:2,height:20,width:20, borderRadius:2}}/>
+                <Text style={{color:"black",fontWeight:"400",fontSize:17,paddingLeft:10}}>{global.iCertifyThatIAmAbove}</Text>
+            </View>
 
 
-           
+            <View style={{ width: "100%", height: 50, marginVertical: 20, marginHorizontal: 20, backgroundColor: "#dadada", justifyContent:"center",alignItems:"center" }}>
+                <Text style={{color:"#737373",fontWeight:"600",fontSize:15}}>Next</Text>
+            </View>
+            {/* <View style={{ flexDirection: 'row', marginTop: 10 }}>
+                <BouncyCheckbox
+                    alignItems="flex-start"
+                    alignSelf="flex-start"
+                    size={20}
+                    unfillColor="#FFFFFF"
+                    text={global.iCertifyThatIAmAbove}
+                    iconStyle={{ borderColor: "red" }}
+                    innerIconStyle={{ borderWidth: 2 }}
+                    textStyle={{ fontFamily: "JosefinSans-Regular" }}
+                    onPress={(isChecked: boolean) => { }}
+                />
+            </View> */}
+
+
+
             <Text style={styles.title}>{global.newUpdate}</Text>
         </View>
     );
