@@ -4,7 +4,9 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 <img src="https://github.com/lucky93agarwal/react_native_testing/assets/53622073/5231b535-1aab-4afb-a3f6-0bac5d5a7460" width="200" title="Splash Screen"/>
 <img src="https://github.com/lucky93agarwal/react_native_testing/assets/53622073/2cd3d1cc-7faf-4007-8707-89cad33848aa" width="200"  title="Version Update Screen"/>
 
-<img src="https://github.com/lucky93agarwal/react_native_testing/assets/53622073/f7a40ab9-e07c-43d2-a43b-8f883c78826a" width="200" title="Language Screen"/>
+<img src="https://github.com/lucky93agarwal/react_native_testing/assets/53622073/7b234b03-7560-4ffc-ba11-63bef1abfb7b" width="200" title="Language Screen"/>
+<img src="https://github.com/lucky93agarwal/react_native_testing/assets/53622073/d0f02c1f-3003-41c9-ab91-58580d37e93d" width="200" title="Welcome Screen"/>
+
 
 
 
