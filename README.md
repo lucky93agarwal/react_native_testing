@@ -8,6 +8,13 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 <img src="https://github.com/lucky93agarwal/react_native_testing/assets/53622073/d0f02c1f-3003-41c9-ab91-58580d37e93d" width="200" title="Welcome Screen"/>
 <img src="https://github.com/lucky93agarwal/react_native_testing/assets/53622073/e8e783e7-6fbf-47ae-902e-03767bd9d9d4" width="200" title="Login Screen"/>
 
+<img src="https://github.com/lucky93agarwal/react_native_testing/assets/53622073/6c78a7ee-b389-4c56-89a3-a433cfa309d1" width="200" title="Register Screen"/>
+<img src="https://github.com/lucky93agarwal/react_native_testing/assets/53622073/5555e449-f194-4e5c-9bbc-225eafb996c7" width="200" title="Enter Code Screen"/>
+
+
+
+
+
 
 
 
