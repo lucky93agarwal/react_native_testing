@@ -6,9 +6,31 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 
 <img src="https://github.com/lucky93agarwal/react_native_testing/assets/53622073/7b234b03-7560-4ffc-ba11-63bef1abfb7b" width="200" title="Language Screen"/>
 <img src="https://github.com/lucky93agarwal/react_native_testing/assets/53622073/d0f02c1f-3003-41c9-ab91-58580d37e93d" width="200" title="Welcome Screen"/>
+<img src="https://github.com/lucky93agarwal/react_native_testing/assets/53622073/e8e783e7-6fbf-47ae-902e-03767bd9d9d4" width="200" title="Login Screen"/>
 
 
 
+
+## Debug and Release APK
+# Debug APK
+# How to generate one in 3 steps?
+Step 1: Go to the root of the project in the terminal and run the below command:<br />
+```bash
+react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res
+```
+Step 2: Go to android directory:<br />
+```bash
+cd android
+```
+Step 3: Now in this android folder, run this command<br />
+```bash
+./gradlew assembleDebug
+```
+
+There! you’ll find the apk file in the following path:< br/>
+```bash
+yourProject/android/app/build/outputs/apk/debug/app-debug.apk
+```
 
 ## Screen Navigation
 
