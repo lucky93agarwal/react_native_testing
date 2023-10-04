@@ -29,4 +29,5 @@
   global.notAMember = 'Not a member?';
   global.register = 'Register';
   global.enterInviteCode = 'Enter Invite Code';
+  global.byRegisteringIaAgreeTo = 'By registering, I a agree to Dream plus';
   global.youWillReceiveAnOtpForVerification = 'You will receive an OTP for verification';

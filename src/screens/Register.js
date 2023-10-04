@@ -70,7 +70,7 @@ const RegisterScreen = ({ navigation }) => {
                 <Text style={{ color: "#737373", fontWeight: "400", fontSize: 15 }}>{global.register}</Text>
             </View>
             <View style={{ justifyContent: "center", alignItems: 'center',flexDirection:"row" }}>
-                <Text style={styles.sublight}>{global.youWillReceiveAnOtpForVerification}</Text>
+                <Text style={styles.sublight}>{global.byRegisteringIaAgreeTo}</Text>
 
                 <Text 
                 onPress={()=>{

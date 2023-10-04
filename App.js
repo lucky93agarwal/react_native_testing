@@ -66,7 +66,7 @@ const App = () => {
         <Stack.Screen
           name="Register"
           component={RegisterScreen}
-          options={{ title: 'Register', headerTitleStyle:{color:"white"},statusBarColor:"black",headerTitleStyle:{fontSize:15}}}
+          options={{ title: 'Register & Play', headerTitleStyle:{color:"white"},statusBarColor:"black",headerTitleStyle:{fontSize:15}}}
         />
       </Stack.Navigator>
     </NavigationContainer>
