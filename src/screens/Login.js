@@ -3,7 +3,6 @@ import logo from '../../assets/images/dream_plus_icon_removebg.png';
 import facebookImg from '../../assets/images/facebook.png';
 import googleImg from '../../assets/images/google.png';
 import React, { useEffect } from 'react';
-import BouncyCheckbox from "react-native-bouncy-checkbox";
 import '../utils/global';
 import {
     StyleSheet,
@@ -13,7 +12,7 @@ import {
     StatusBar,
     Dimensions,
     TextInput,
-    CheckBox,
+    TouchableOpacity,
 } from 'react-native';
 
 
@@ -21,7 +20,7 @@ import { NavigationContainer, useNavigation } from '@react-navigation/native';
 
 const { width, height } = Dimensions.get("window");
 
-const LoginScreen = ({ navigation }) => {
+const LoginScreen = ({navigation}) => {
 
 
 
@@ -67,8 +66,8 @@ const LoginScreen = ({ navigation }) => {
                 <View style={styles.pointStyle} />
                 <View style={styles.pointStyle} />
                 <View style={styles.pointStyle} />
-                <View style={{ width: 50, height: 50, backgroundColor: "#f5f5f5", marginHorizontal: 5, borderRadius: 80, justifyContent: 'center', alignItems: 'center' }}>
-                    <Text style={{ color: "#7a7a7a", fontWeight: "600" }}>OR</Text>
+                <View style={{ width: 40, height: 40, backgroundColor: "#f5f5f5", marginHorizontal: 5, borderRadius: 80, justifyContent: 'center', alignItems: 'center' }}>
+                    <Text style={{ color: "#7a7a7a", fontWeight: "400" }}>OR</Text>
                 </View>
                 <View style={styles.pointStyle} />
                 <View style={styles.pointStyle} />
@@ -76,42 +75,44 @@ const LoginScreen = ({ navigation }) => {
             </View>
             <View style={{ width: "100%", height: 50, marginVertical: 10, marginHorizontal: 20, backgroundColor: "#f5f5f5" }}>
                 <TextInput
-                    style={{ fontSize: 18, width: "100%", paddingLeft: 20, borderRadius: 5, borderBottomWidth: 2, borderColor: "#c6c6c6" }}
+                    style={{ fontSize: 16, width: "100%", paddingLeft: 20, borderRadius: 5, borderBottomWidth: 2, borderColor: "#c6c6c6" }}
                     autoCapitalize='none'
                     autoCorrect={false}
                     placeholder='Email or mobile no.'
                 ></TextInput>
             </View>
-            <View style={{ width: "100%", height: 50, marginHorizontal: 20,flexDirection:"row",alignItems:"center"}}>
-                <View style={{borderColor:"#d7d7d7",borderWidth:2,height:20,width:20, borderRadius:2}}/>
-                <Text style={{color:"black",fontWeight:"400",fontSize:17,paddingLeft:10}}>{global.iCertifyThatIAmAbove}</Text>
+            <View style={{ width: "100%", height: 50, marginHorizontal: 20, flexDirection: "row", alignItems: "center" }}>
+                <View style={{ borderColor: "#d7d7d7", borderWidth: 2, height: 15, width: 15, borderRadius: 2 }} />
+                <Text style={{ color: "black", fontWeight: "400", fontSize: 15, paddingLeft: 10 }}>{global.iCertifyThatIAmAbove}</Text>
             </View>
 
 
-            <View style={{ width: "100%", height: 50, marginVertical: 20, marginHorizontal: 20, backgroundColor: "#dadada", justifyContent:"center",alignItems:"center" }}>
-                <Text style={{color:"#737373",fontWeight:"600",fontSize:15}}>Next</Text>
-            </View>
-            <View style={{justifyContent:"center",alignItems:'center'}}>
+            <TouchableOpacity onPress={() => {
+                navigation.navigate('Register', {name: 'Jane'});
+            }}
+                style={{
+                    width: "100%",
+                    height: 40,
+                    marginVertical: 20,
+                    marginHorizontal: 20,
+                    backgroundColor: "#dadada",
+                    justifyContent: "center",
+                    alignItems: "center"
+                }}>
+                <Text style={{
+                    color: "#737373",
+                    fontWeight: "400",
+                    fontSize: 15
+                }}>Next</Text>
+            </TouchableOpacity>
+            <View style={{ justifyContent: "center", alignItems: 'center' }}>
                 <Text>{global.notAMember}</Text>
-                <Text style={{color:"black"}}>{global.register}</Text>
+                <Text style={{ color: "black" }}>{global.register}</Text>
             </View>
-            {/* <View style={{ flexDirection: 'row', marginTop: 10 }}>
-                <BouncyCheckbox
-                    alignItems="flex-start"
-                    alignSelf="flex-start"
-                    size={20}
-                    unfillColor="#FFFFFF"
-                    text={global.iCertifyThatIAmAbove}
-                    iconStyle={{ borderColor: "red" }}
-                    innerIconStyle={{ borderWidth: 2 }}
-                    textStyle={{ fontFamily: "JosefinSans-Regular" }}
-                    onPress={(isChecked: boolean) => { }}
-                />
-            </View> */}
 
 
 
-            <Text style={styles.title}>{global.newUpdate}</Text>
+
         </View>
     );
 };
@@ -129,7 +130,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
-    pointStyle: { width: 5, height: 5, backgroundColor: "#e1e1e1", marginHorizontal: 2 },
+    pointStyle: { width: 3, height: 3, backgroundColor: "#e1e1e1", marginHorizontal: 2 },
 
     highlight: {
         width: 20,

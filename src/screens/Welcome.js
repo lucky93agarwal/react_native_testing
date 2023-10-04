@@ -105,7 +105,7 @@ const WelcomeScreen = ({navigation}) => {
                     {
                         data.map((item, index) => {
                             return (
-                                <View style={{ width:currentIndex==index?20: 5, 
+                                <View key={index} style={{ width:currentIndex==index?20: 5, 
                                 height:currentIndex==index?8:  5, borderRadius: currentIndex==index?24: 14, backgroundColor: currentIndex==index?'white': 'gray', marginLeft: 5 }}>
 
                                 </View>
@@ -119,7 +119,7 @@ const WelcomeScreen = ({navigation}) => {
 
             <View style={styles.footContainer}>
                 <View style={[{ justifyContent: "center", alignItems: "center" }]}>
-                    <TouchableOpacity style={styles.button} onPress={() => Linking.openURL(global.newVersionURL)}>
+                    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Register', {name: 'Jane'})}>
                         <Text style={styles.textButton}>{global.register}</Text>
                     </TouchableOpacity>
                 </View>

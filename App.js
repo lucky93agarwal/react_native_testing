@@ -20,6 +20,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import WelcomeScreen from './src/screens/Welcome';
 import LoginScreen from './src/screens/Login';
+import RegisterScreen from './src/screens/Register';
 
 const Stack = createNativeStackNavigator();
 
@@ -34,7 +35,7 @@ const App = () => {
           backgroundColor:"black",
           statusBarColor:"black",
         },
-        headerTintColor:"white"
+        headerTintColor:"white",
       }}>
         <Stack.Screen
           name="Splash"
@@ -60,7 +61,12 @@ const App = () => {
         <Stack.Screen
           name="Login"
           component={LoginScreen}
-          options={{ title: 'Login', headerTitleStyle:{color:"white"},statusBarColor:"black"}}
+          options={{ title: 'Login', headerTitleStyle:{color:"white"},statusBarColor:"black",headerTitleStyle:{fontSize:15}}}
+        />
+        <Stack.Screen
+          name="Register"
+          component={RegisterScreen}
+          options={{ title: 'Register', headerTitleStyle:{color:"white"},statusBarColor:"black",headerTitleStyle:{fontSize:15}}}
         />
       </Stack.Navigator>
     </NavigationContainer>

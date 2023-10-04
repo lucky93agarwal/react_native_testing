@@ -28,3 +28,5 @@
   global.useYourSkillsToPickTheRight = 'Use your skills to pick the right players and earn fantasy points.';
   global.notAMember = 'Not a member?';
   global.register = 'Register';
+  global.enterInviteCode = 'Enter Invite Code';
+  global.youWillReceiveAnOtpForVerification = 'You will receive an OTP for verification';
