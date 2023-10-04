@@ -127,7 +127,7 @@ const WelcomeScreen = ({navigation}) => {
                 <View style={styles.vertical}>
                     <View>
                         <Text style={styles.sublight}>{global.invitedByAFriend}</Text>
-                        <Text style={styles.title}>{global.enterCode}</Text>
+                        <Text style={styles.title} onPress={()=> navigation.navigate('RegisterWithCode', {name: 'Jane'})}>{global.enterCode}</Text>
                     </View>
                     <View style={[{ alignItems: "flex-end" }]}>
                         <Text style={styles.sublight}>{global.alreadyAUser}</Text>

@@ -21,6 +21,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import WelcomeScreen from './src/screens/Welcome';
 import LoginScreen from './src/screens/Login';
 import RegisterScreen from './src/screens/Register';
+import RegisterWithCodeScreen from './src/screens/RegisterWithCode';
 
 const Stack = createNativeStackNavigator();
 
@@ -66,6 +67,11 @@ const App = () => {
         <Stack.Screen
           name="Register"
           component={RegisterScreen}
+          options={{ title: 'Register & Play', headerTitleStyle:{color:"white"},statusBarColor:"black",headerTitleStyle:{fontSize:15}}}
+        />
+        <Stack.Screen
+          name="RegisterWithCode"
+          component={RegisterWithCodeScreen}
           options={{ title: 'Register & Play', headerTitleStyle:{color:"white"},statusBarColor:"black",headerTitleStyle:{fontSize:15}}}
         />
       </Stack.Navigator>

@@ -21,7 +21,7 @@ import { NavigationContainer, useNavigation } from '@react-navigation/native';
 
 const { width, height } = Dimensions.get("window");
 
-const RegisterScreen = ({ navigation }) => {
+const RegisterWithCodeScreen = ({ navigation }) => {
 
 
 
@@ -31,6 +31,17 @@ const RegisterScreen = ({ navigation }) => {
                 backgroundColor="black"
                 barStyle="light-content"
             />
+            <View
+            style={{marginVertical:5}}
+            />
+            <View style={styles.inputViewStyle}>
+                <TextInput
+                    style={styles.inputStyleTwo}
+                    autoCapitalize='none'
+                    autoCorrect={false}
+                    placeholder={global.enterInviteCode}
+                ></TextInput>
+            </View>
             <View
             style={{marginVertical:5}}
             />
@@ -157,6 +168,6 @@ const styles = StyleSheet.create({
     }
 });
 
-export default RegisterScreen;
+export default RegisterWithCodeScreen;
 
 
