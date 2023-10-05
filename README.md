@@ -18,6 +18,11 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 ```bash
 https://jsonplaceholder.typicode.com
 ```
+## API
+```bash
+npm install axios
+```
+
 
 ## Debug and Release APK
 # Debug APK
