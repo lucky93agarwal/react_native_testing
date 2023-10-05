@@ -15,8 +15,11 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 
 
 
+## model API
 
-
+```bash
+https://jsonplaceholder.typicode.com
+```
 
 ## Debug and Release APK
 # Debug APK
