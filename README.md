@@ -10,9 +10,7 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 
 <img src="https://github.com/lucky93agarwal/react_native_testing/assets/53622073/6c78a7ee-b389-4c56-89a3-a433cfa309d1" width="200" title="Register Screen"/>
 <img src="https://github.com/lucky93agarwal/react_native_testing/assets/53622073/5555e449-f194-4e5c-9bbc-225eafb996c7" width="200" title="Enter Code Screen"/>
-
-
-
+<img src="https://github.com/lucky93agarwal/react_native_testing/assets/53622073/d13a7c71-2d3e-463f-ad46-63f2548ef2cd" width="200" title="Notification Popup Screen"/>
 
 
 ## model API
