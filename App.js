@@ -8,7 +8,7 @@
 import React from 'react';
 import {
   StyleSheet,
-  Text,
+  Image,
   View,
 } from 'react-native';
 
@@ -16,12 +16,18 @@ import SplashScreenComponent from './src/screens/Splash';
 import VersionScreen from './src/screens/VersionCheck';
 import LanguageScreen from './src/screens/Language';
 
+import langIcon from './assets/icons/language_icon.png';
+import perceIcons from './assets/icons/percentage_icon.png';
+import walletIcon from './assets/icons/wallet_icon.png';
+
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import WelcomeScreen from './src/screens/Welcome';
 import LoginScreen from './src/screens/Login';
 import RegisterScreen from './src/screens/Register';
 import RegisterWithCodeScreen from './src/screens/RegisterWithCode';
+import HomeScreen from './src/screens/Home';
+import Header from './src/screens/Header';
 
 const Stack = createNativeStackNavigator();
 
@@ -31,13 +37,13 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-      screenOptions={{
-        headerStyle:{
-          backgroundColor:"black",
-          statusBarColor:"black",
-        },
-        headerTintColor:"white",
-      }}>
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: "black",
+            statusBarColor: "black",
+          },
+          headerTintColor: "white",
+        }}>
         <Stack.Screen
           name="Splash"
           component={SplashScreenComponent}
@@ -62,17 +68,38 @@ const App = () => {
         <Stack.Screen
           name="Login"
           component={LoginScreen}
-          options={{ title: 'Login', headerTitleStyle:{color:"white"},statusBarColor:"black",headerTitleStyle:{fontSize:15}}}
+          options={{ title: 'Login', headerTitleStyle: { color: "white" }, statusBarColor: "black", headerTitleStyle: { fontSize: 15 } }}
         />
         <Stack.Screen
           name="Register"
           component={RegisterScreen}
-          options={{ title: 'Register & Play', headerTitleStyle:{color:"white"},statusBarColor:"black",headerTitleStyle:{fontSize:15}}}
+          options={{ title: 'Register & Play', headerTitleStyle: { color: "white" }, statusBarColor: "black", headerTitleStyle: { fontSize: 15 } }}
         />
         <Stack.Screen
           name="RegisterWithCode"
           component={RegisterWithCodeScreen}
-          options={{ title: 'Register & Play', headerTitleStyle:{color:"white"},statusBarColor:"black",headerTitleStyle:{fontSize:15}}}
+          options={{ title: 'Register & Play', headerTitleStyle: { color: "white" }, statusBarColor: "black", headerTitleStyle: { fontSize: 15 } }}
+        />
+        <Stack.Screen
+          name="home"
+          component={HomeScreen}
+          options={{
+            headerBackVisible: false,
+            headerTitle: () => <Header name="Home" />,
+            headerRight: () => (
+              <View style={{flexDirection:'row'}}>
+                <Image source={langIcon} resizeMode="contain" style={styles.highlightNew} />
+
+                <Image source={perceIcons} resizeMode="contain" style={styles.highlightNew} />
+
+                <Image source={walletIcon} resizeMode="contain" style={styles.highlightNew} />
+
+              </View>
+            ),
+            statusBarColor: "red",
+            headerStyle: { backgroundColor: "red", },
+            
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>
@@ -80,6 +107,11 @@ const App = () => {
 };
 
 const styles = StyleSheet.create({
+  highlightNew: {
+    width: 20,
+    height: 20,
+    marginHorizontal:7
+  },
   sectionContainer: {
     marginTop: 32,
     paddingHorizontal: 24,

@@ -88,7 +88,7 @@ const LoginScreen = ({navigation}) => {
 
 
             <TouchableOpacity onPress={() => {
-                navigation.navigate('Register', {name: 'Jane'});
+                navigation.navigate('home', {name: 'Jane'});
             }}
                 style={{
                     width: "100%",

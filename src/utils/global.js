@@ -31,3 +31,10 @@
   global.enterInviteCode = 'Enter Invite Code';
   global.byRegisteringIaAgreeTo = 'By registering, I a agree to Dream plus';
   global.youWillReceiveAnOtpForVerification = 'You will receive an OTP for verification';
+  global.selectMatch = 'SELECT MATCH';
+  global.joinContest = 'JOIN CONTEST';
+  global.createTeam = 'CREATE TEAM';
+  global.allowNotificationToGetTheLatestUpdate = 'Allow notifications to get the latest updates, offers and more';
+  global.neverMissOutOnTheBestOfDreamPlus = 'Never miss out on the best of Dream Plus';
+  global.allowNotification = 'ALLOW NOTIFICATIONS';
+  global.maybeLater = 'MAYBE LATER';
