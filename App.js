@@ -5,13 +5,14 @@
  * @format
  */
 
-import React from 'react';
+import React, {useState} from 'react';
 import {
   StyleSheet,
   Image,
   View,
+  TouchableOpacity,
 } from 'react-native';
-
+import BottomSheetLanguage from './src/screens/Comman/BottomSheetLanguage';
 import SplashScreenComponent from './src/screens/Splash';
 import VersionScreen from './src/screens/VersionCheck';
 import LanguageScreen from './src/screens/Language';
@@ -32,7 +33,15 @@ import Header from './src/screens/Header';
 const Stack = createNativeStackNavigator();
 
 const App = () => {
-
+  const onPass = ()=>{
+    if(visibileData){
+      setVisibileData(false);
+    }else {
+      setVisibileData(true);
+    }
+  
+  }
+  const [visibileData, setVisibileData] = useState(false);
   console.log("in lucky2");
   return (
     <NavigationContainer>
@@ -88,7 +97,17 @@ const App = () => {
             headerTitle: () => <Header name="Home" />,
             headerRight: () => (
               <View style={{flexDirection:'row'}}>
+                <TouchableOpacity onPress={()=>{
+                  if(visibileData){
+                    setVisibileData(false);
+                  }else {
+                    setVisibileData(true);
+                  }
+                  
+                }}>
                 <Image source={langIcon} resizeMode="contain" style={styles.highlightNew} />
+                </TouchableOpacity>
+                
 
                 <Image source={perceIcons} resizeMode="contain" style={styles.highlightNew} />
 
@@ -102,7 +121,9 @@ const App = () => {
           }}
         />
       </Stack.Navigator>
+      <BottomSheetLanguage langVisible={visibileData} onPass={onPass}/>
     </NavigationContainer>
+    
   );
 };
 

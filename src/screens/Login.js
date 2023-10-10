@@ -16,7 +16,7 @@ import {
 } from 'react-native';
 
 
-import { NavigationContainer, useNavigation } from '@react-navigation/native';
+
 
 const { width, height } = Dimensions.get("window");
 

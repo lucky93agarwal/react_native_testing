@@ -59,7 +59,8 @@ const LanguageChangeScreen = ({navigation}) => {
                 <Text style={styles.sublight}>{global.youCanChangeYourPrefersenceFrom}</Text>
                
 
-                <TouchableOpacity style={[styles.customButton, {backgroundColor:color,  borderColor: unselect}]} onPress={()=> handleClick() }>
+                <TouchableOpacity style={[styles.customButton, {backgroundColor:color,  borderColor: unselect}]} 
+                onPress={()=> handleClick() }>
                     <Text style={styles.customTextButton}>{global.english}</Text>
                     <View style={[styles.circle]}>
                     <View style={[styles.circleTwo,{opacity:hide?1:0}]}/>
@@ -67,7 +68,8 @@ const LanguageChangeScreen = ({navigation}) => {
                     </View>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={[styles.customButton, {backgroundColor:colortwo, borderColor: select,}]} onPress={()=>  handleClickTwo() }>
+                <TouchableOpacity style={[styles.customButton, {backgroundColor:colortwo, borderColor: select,}]} 
+                onPress={()=>  handleClickTwo() }>
                     <Text style={styles.customTextButton}>{global.hindi}</Text>
                     <View style={[styles.circle]}>
                      
