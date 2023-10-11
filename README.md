@@ -16,6 +16,11 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 <img src="https://github.com/lucky93agarwal/react_native_testing/assets/53622073/162a2bf8-6806-4b37-93fe-7c3537b7de4b" width="200" title="Language Bottom Sheet"/>
 
 
+## Local Storage
+
+```bash
+npm install @react-native-async-storage/async-storage
+```
 
 ## model API
 
