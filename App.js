@@ -12,6 +12,7 @@ import {
   View,
   TouchableOpacity,
 } from 'react-native';
+
 import BottomSheetLanguage from './src/screens/Comman/BottomSheetLanguage';
 import SplashScreenComponent from './src/screens/Splash';
 import VersionScreen from './src/screens/VersionCheck';
@@ -121,7 +122,7 @@ const App = () => {
           }}
         />
       </Stack.Navigator>
-      <BottomSheetLanguage langVisible={visibileData} onPass={onPass}/>
+      <BottomSheetLanguage langVisible={visibileData} setVisibileData={setVisibileData}/>
     </NavigationContainer>
     
   );

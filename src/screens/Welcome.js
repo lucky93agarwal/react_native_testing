@@ -24,35 +24,36 @@ const { height, width } = Dimensions.get("window");
 const DATA = [
     {
       id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
-      title:  global.welcomeToDreamPlus,
-      subTitle: global.readyToStartWinning,
+      title:  t("welcomeToDreamPlus"),
+      subTitle: t("readyToStartWinning"),
       img:oneimg
     },
     {
       id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
-      title:  global.selectAMatch,
-      subTitle: global.chooseAnUpcomingMatch,
+      title:  t("selectAMatch"),
+      subTitle: t("chooseAnUpcomingMatch"),
       img:twoimg
     },
     {
       id: '58694a0f-3da1-471f-bd96-145571e29d72',
-      title:  global.joinContests,
-      subTitle: global.competeWithOtherDreamPlus,
+      title:  t("joinContests"),
+      subTitle: t("competeWithOtherDreamPlus"),
       img:threeimg
     },
     {
         id: '58694a0f-3da1-471f-bd96-145571e29d73',
-        title:  global.createTeams,
-        subTitle: global.useYourSkillsToPickTheRight,
+        title:  t("createTeams"),
+        subTitle: t("useYourSkillsToPickTheRight"),
         img:fourimg
       },
   ];
 
-
+  import { useTranslation } from 'react-i18next';
+import { t } from 'i18next';
 const WelcomeScreen = ({navigation}) => {
 
 
-
+    const { t } = useTranslation();
 
     const [data, setData] = useState(DATA)
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -120,18 +121,18 @@ const WelcomeScreen = ({navigation}) => {
             <View style={styles.footContainer}>
                 <View style={[{ justifyContent: "center", alignItems: "center" }]}>
                     <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Register', {name: 'Jane'})}>
-                        <Text style={styles.textButton}>{global.register}</Text>
+                        <Text style={styles.textButton}>{t("register")}</Text>
                     </TouchableOpacity>
                 </View>
 
                 <View style={styles.vertical}>
                     <View>
-                        <Text style={styles.sublight}>{global.invitedByAFriend}</Text>
-                        <Text style={styles.title} onPress={()=> navigation.navigate('RegisterWithCode', {name: 'Jane'})}>{global.enterCode}</Text>
+                        <Text style={styles.sublight}>{t("invitedByAFriend")}</Text>
+                        <Text style={styles.title} onPress={()=> navigation.navigate('RegisterWithCode', {name: 'Jane'})}>{t("enterCode")}</Text>
                     </View>
                     <View style={[{ alignItems: "flex-end" }]}>
-                        <Text style={styles.sublight}>{global.alreadyAUser}</Text>
-                        <Text style={styles.title} onPress={()=> navigation.navigate('Login', {name: 'Jane'})}>{global.logIn}</Text>
+                        <Text style={styles.sublight}>{t("alreadyAUser")}</Text>
+                        <Text style={styles.title} onPress={()=> navigation.navigate('Login', {name: 'Jane'})}>{t("logIn")}</Text>
                     </View>
                 </View>
 

@@ -55,7 +55,9 @@ const BottomSheetLanguage = (props) => {
         <Modal transparent={true}
             visible={props.langVisible}
             animationType='slide'
-            onRequestClose={props.onPass}>
+            onRequestClose={()=>{
+                props.setVisibileData(false);
+            }}>
             <View
                 style={{ flex: 1, backgroundColor: "#000000aa" }}>
                 <View style={styles.highlightNew}>
@@ -169,7 +171,7 @@ const styles = StyleSheet.create({
         height: height,
         width: width,
         backgroundColor: "white",
-        top: height / 1.5,
+        top: height / 1.54,
         position: "absolute",
         borderRadius: 10,
         alignItems: "center"

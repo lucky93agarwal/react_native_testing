@@ -6,11 +6,24 @@ import {
     TouchableOpacity,
     StyleSheet,
 } from 'react-native';
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import logo from '../../../assets/images/one.png';
+import { storeData, retrieveData, KeyNotification } from '../../storage/LocalStorage';
 const NotificationModal = (props) => {
     const [visibile, setVisibile] = useState(true);
     
+    getLocalData = async () => {
+        console.warn("lucky  "+retrieveData(KeyNotification));
+        if(retrieveData(KeyNotification) == "true"){//
+            console.warn("lucky  "+retrieveData(KeyNotification));
+            setVisibile(false);
+        }else {
+            setVisibile(true);
+        }
+    }
+    useEffect(() => {
+        getLocalData();
+    }, [])
     return (
 
 
@@ -45,7 +58,9 @@ const NotificationModal = (props) => {
                         }}>{global.allowNotificationToGetTheLatestUpdate}</Text>
 
                         <TouchableOpacity onPress={() => {
-                          setVisibile(false);
+                            storeData(KeyNotification,"true");
+                           
+                         // setVisibile(false);
                         }}
                             style={{
                                 width: "100%",
@@ -65,7 +80,9 @@ const NotificationModal = (props) => {
 
 
                         <TouchableOpacity onPress={() => {
-                            setVisibile(false);
+                            //
+                            retrieveData(KeyNotification);
+                         //   setVisibile(false);
                         }}
                             style={{
                                 width: "100%",

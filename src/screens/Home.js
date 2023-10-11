@@ -25,12 +25,15 @@ import {
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
 
 const { width, height } = Dimensions.get("window");
-
+import { storeData, retrieveData, KeyNotification } from '../storage/LocalStorage';
 const HomeScreen = ({ navigation }) => {
     const [data, setData] = useState(undefined);
-
+    const [notifi, setNotifi] = useState(true);
+//
 
     const getAPIData = async () => {
+        setNotifi(retrieveData(KeyNotification));
+        console.warn("lucky  "+notifi);
         // api call
         await axiosGetReq()
             .then(res => {
@@ -99,8 +102,9 @@ const HomeScreen = ({ navigation }) => {
             </ScrollView>
 
 
+
            
-            <NotificationModal/>
+            {notifi == "false"?<NotificationModal/>:null}
 
 
 
