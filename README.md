@@ -87,6 +87,7 @@ npm i react-native-linear-gradient
 ## Create new project
 
 ```bash
+npm install npm -g
 npx react-native@latest init <Project_Name>
 ```
 
