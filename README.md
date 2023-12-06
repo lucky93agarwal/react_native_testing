@@ -15,6 +15,54 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 
 <img src="https://github.com/lucky93agarwal/react_native_testing/assets/53622073/162a2bf8-6806-4b37-93fe-7c3537b7de4b" width="200" title="Language Bottom Sheet"/>
 
+## NetworkCall
+Step 1. Firstly, make sure to install the necessary packages by running:
+```bash
+npm install --save react-native
+```
+Step 2. Now, you can use the following example to make a simple GET request in a React Native component:
+
+```bash
+import React, { useState, useEffect } from 'react';
+import { View, Text, Button } from 'react-native';
+
+const YourComponent = () => {
+  const [data, setData] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    try {
+      const response = await fetch('https://api.example.com/data');
+      const result = await response.json();
+
+      setData(result);
+      setIsLoading(false);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      setIsLoading(false);
+    }
+  };
+
+  return (
+    <View>
+      {isLoading ? (
+        <Text>Loading...</Text>
+      ) : (
+        <>
+          <Text>Data: {JSON.stringify(data)}</Text>
+          <Button title="Refresh Data" onPress={fetchData} />
+        </>
+      )}
+    </View>
+  );
+};
+
+export default YourComponent;
+```
 
 ## Local Storage
 
