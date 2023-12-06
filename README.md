@@ -63,6 +63,18 @@ const YourComponent = () => {
 
 export default YourComponent;
 ```
+In this example:
+- We use the fetch function to make a GET request to the specified URL.
+- The useEffect hook ensures that the data is fetched when the component mounts.
+- The component uses state (data, isLoading) to manage the loading state and store the fetched data.
+- The UI conditionally renders loading text or the data, along with a button to refresh the data.
+
+Remember to replace the URL 'https://api.example.com/data' with the actual URL of the API you want to call. Additionally, error handling is important, so you might want to enhance it based on your specific requirements.
+
+If you prefer using a third-party library like Axios, you can install it using:
+```bash
+npm install axios
+```
 
 ## Local Storage
 
